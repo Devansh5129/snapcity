@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="SnapCity helps students and employees discover essential places and services in a new city."
+    >
+
+    <title>SnapCity — Your New City, Simplified</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<nav class="top-nav">
+
+    <div class="nav-logo">
+        <a href="index.html">SnapCity</a>
+    </div>
+
+   <nav class="nav-links">
+
+    <a href="#explore">Explore</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+
+    <a href="login.html" id="loginLink">Login</a>
+    <a href="register.html" id="registerLink">Register</a>
+
+    <button id="logoutButton" style="display: none;">
+        Logout
+    </button>
+
+</nav>
+
+</nav>
+
+
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <a href="#" class="logo">
+                Snap<span>City</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#explore">Explore</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+
+            </nav>
+
+            <a href="#explore" class="nav-button">
+                Explore City
+            </a>
+        
+<button
+    type="button"
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch to dark theme"
+    title="Switch theme"
+>
+    🌙
+</button>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================== HERO ==================== -->
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">
+                        YOUR CITY, MADE SIMPLE
+                    </p>
+                    <h1>
+                        New city?
+                        <span>We've got you.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Find hostels, messes, restaurants, hospitals,
+                        clinics, temples and everything you need
+                        to settle into your new city.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#explore" class="primary-button">
+                            Explore Your City
+                        </a>
+                        <a href="#categories" class="secondary-button">
+                            View Categories
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div>
+                            <p class="small-label">EXPLORE</p>
+                            <h3>Find what you need</h3>
+                        </div>
+                        <div class="location-icon">
+                            📍
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <span>📍</span>
+                        <div>
+                            <p>Location</p>
+                            <strong>Select your city</strong>
+                        </div>
+                    </div>
+                    <div class="quick-categories">
+                        <div class="quick-category">
+                            🏠
+                            <span>Hostel</span>
+                        </div>
+
+                        <div class="quick-category">
+                            🍱
+                            <span>Mess</span>
+                        </div>
+
+                        <div class="quick-category">
+                            🏥
+                            <span>Hospital</span>
+                        </div>
+
+                        <div class="quick-category">
+                            🍴
+                            <span>Food</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== EXPLORE ==================== -->
+        <section id="explore" class="explore-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">
+                        GET STARTED
+                    </p>
+                    <h2>
+                        Where are you heading?
+                    </h2>
+                    <p>
+                        Select your city and discover everything
+                        you need around you.
+                    </p>
+                </div>
+                <div class="city-selector">
+                    <div class="select-wrapper">
+                        <span>📍</span>
+                        <select id="citySelect">
+                            <option value="">
+                                Select your city
+                            </option>
+                            <option value="Indore">
+                                Indore
+                            </option>
+                            <option value="Bhopal">
+                                Bhopal
+                            </option>
+                        </select>
+                    </div>
+                    <button
+                        id="exploreButton"
+                        class="primary-button"
+                    >
+                        Explore
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== CATEGORIES ==================== -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">
+                        EXPLORE SERVICES
+                    </p>
+                    <h2>
+                        Everything you need in one place
+                    </h2>
+                    <p>
+                        From finding a place to stay to grabbing
+                        a quick meal, SnapCity helps you settle in.
+                    </p>
+                </div>
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="category-icon">
+                            🏠
+                        </div>
+                        <h3>Hostels & PGs</h3>
+                        <p>
+                            Find affordable accommodation
+                            near your college or workplace.
+                        </p>
+                    </article>
+                    <article class="category-card">
+                        <div class="category-icon">
+                            🍱
+                        </div>
+                        <h3>Mess & Tiffin</h3>
+                        <p>
+                            Discover nearby messes and
+                            tiffin services.
+                        </p>
+                    </article>
+                    <article class="category-card">
+
+                        <div class="category-icon">
+                            🍴
+                        </div>
+                        <h3>Restaurants</h3>
+                        <p>
+                            Find places to eat based on
+                            your location and preferences.
+                        </p>
+                    </article>
+                    <article class="category-card">
+                        <div class="category-icon">
+                            🏥
+                        </div>
+                        <h3>Hospitals</h3>
+                        <p>
+                            Quickly locate nearby hospitals
+                            when you need medical help.
+                        </p>
+                    </article>
+                    <article class="category-card">
+                        <div class="category-icon">
+                            🩺
+                        </div>
+                        <h3>Clinics</h3>
+                        <p>
+                            Find local clinics and healthcare
+                            services around you.
+                        </p>
+                    </article>
+                    <article class="category-card">
+
+                        <div class="category-icon">
+                            🛕
+                        </div>
+
+                        <h3>Temples & Places</h3>
+
+                        <p>
+                            Discover temples and important
+                            places in your new city.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== ABOUT ==================== -->
+
+        <section id="about" class="about-section">
+
+            <div class="container about-content">
+
+                <div>
+
+                    <p class="eyebrow">
+                        WHY SNAPCITY?
+                    </p>
+
+                    <h2>
+                        Starting somewhere new
+                        shouldn't feel difficult.
+                    </h2>
+                </div>
+
+                <p>
+                    Moving to a new city can be overwhelming.
+                    SnapCity brings essential local information
+                    together so students and employees can spend
+                    less time searching and more time settling in.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div>
+                <a href="#" class="logo">
+                    Snap<span>City</span>
+                </a>
+
+                <p>
+                    Your new city, simplified.
+                </p>
+            </div>
+            <p>
+                © 2026 SnapCity. Built with purpose.
+            </p>
+
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

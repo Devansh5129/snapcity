@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore hostels, PGs, restaurants, messes, hospitals, clinics and temples with SnapCity."
+    >
+
+    <title>Explore City | SnapCity</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <a href="index.html" class="logo">
+                Snap<span>City</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="index.html#explore" class="nav-button">
+                Explore City
+            </a>
+            <button
+    type="button"
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch to dark theme"
+    title="Switch theme"
+>
+    🌙
+</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main>
+
+        <!-- ======================================
+             CITY HERO
+             ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    EXPLORE YOUR CITY
+                </p>
+
+                <h1 id="cityHeading">
+                    Explore City
+                </h1>
+
+                <p>
+                    Find everything you need in your new city.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             CATEGORY SECTION
+             ====================================== -->
+
+        <section class="categories-section">
+
+            <div class="container">
+
+                <p class="section-eyebrow">
+                    DISCOVER
+                </p>
+
+                <h2>
+                    What are you looking for?
+                </h2>
+
+                <p class="section-description">
+                    Choose a category to discover places around you.
+                </p>
+
+
+                <!-- CATEGORY GRID -->
+
+                <div class="category-grid">
+
+
+                    <!-- HOSTELS -->
+
+                    <button
+                        class="category-card"
+                        data-category="hostel"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            🏠
+                        </span>
+
+                        <span class="category-title">
+                            Hostels & PGs
+                        </span>
+
+                        <span class="category-subtitle">
+                            Find a place to stay
+                        </span>
+
+                    </button>
+
+
+                    <!-- MESS -->
+
+                    <button
+                        class="category-card"
+                        data-category="mess"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            🍱
+                        </span>
+
+                        <span class="category-title">
+                            Mess & Tiffin
+                        </span>
+
+                        <span class="category-subtitle">
+                            Affordable daily meals
+                        </span>
+
+                    </button>
+
+
+                    <!-- RESTAURANTS -->
+
+                    <button
+                        class="category-card"
+                        data-category="restaurant"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            🍴
+                        </span>
+
+                        <span class="category-title">
+                            Restaurants
+                        </span>
+
+                        <span class="category-subtitle">
+                            Discover places to eat
+                        </span>
+
+                    </button>
+
+
+                    <!-- HOSPITALS -->
+
+                    <button
+                        class="category-card"
+                        data-category="hospital"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            🏥
+                        </span>
+
+                        <span class="category-title">
+                            Hospitals
+                        </span>
+
+                        <span class="category-subtitle">
+                            Find nearby hospitals
+                        </span>
+
+                    </button>
+
+
+                    <!-- CLINICS -->
+
+                    <button
+                        class="category-card"
+                        data-category="clinic"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            💊
+                        </span>
+
+                        <span class="category-title">
+                            Clinics
+                        </span>
+
+                        <span class="category-subtitle">
+                            Find local clinics
+                        </span>
+
+                    </button>
+
+
+                    <!-- TEMPLES -->
+
+                    <button
+                        class="category-card"
+                        data-category="temple"
+                        type="button"
+                    >
+
+                        <span class="category-icon">
+                            🛕
+                        </span>
+
+                        <span class="category-title">
+                            Temples
+                        </span>
+
+                        <span class="category-subtitle">
+                            Explore important places
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <h3>
+                    Snap<span>City</span>
+                </h3>
+
+                <p>
+                    Your new city, simplified.
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 SnapCity. Built with purpose.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="js/theme.js"></script>
+<script src="js/explore.js"></script>
+
+</body>
+
+</html>
+

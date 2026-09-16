@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="View detailed information about places on SnapCity."
+    >
+
+    <title>SnapCity — Place Details</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Snap<span>City</span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#explore">
+                    Explore
+                </a>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+            </nav>
+
+
+            <a
+                href="index.html#explore"
+                class="nav-button"
+            >
+                Explore City
+            </a>
+            <button
+    type="button"
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch to dark theme"
+    title="Switch theme"
+>
+    🌙
+</button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+         ========================================== -->
+
+    <main class="place-details-page">
+
+        <div class="container">
+
+
+            <!-- BACK BUTTON -->
+
+            <button
+                type="button"
+                id="backButton"
+                class="back-button"
+            >
+                ← Back to Places
+            </button>
+
+
+            <!-- ==================================
+                 PLACE DETAILS
+                 ================================== -->
+
+            <div id="placeDetails">
+
+
+                <!-- LOADING STATE -->
+
+                <div class="place-loading">
+
+                    <div class="loading-spinner"></div>
+
+                    <p>
+                        Loading place details...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+
+                <div>
+
+                    <h3>
+                        Snap<span>City</span>
+                    </h3>
+
+                    <p>
+                        Your new city, simplified.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    © 2026 SnapCity.
+                    Built to help newcomers settle in faster.
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+   <script src="js/theme.js"></script>
+<script src="js/place.js"></script>
+
+
+</body>
+
+</html>

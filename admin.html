@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="SnapCity admin dashboard for managing places."
+    >
+
+    <title>SnapCity — Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <a href="index.html" class="logo">
+                Snap<span>City</span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#explore">
+                    Explore
+                </a>
+                <button
+    type="button"
+    id="themeToggle"
+    class="theme-toggle"
+    aria-label="Switch to dark theme"
+    title="Switch theme"
+>
+    🌙
+</button>
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+            </nav>
+
+
+            <div class="admin-nav-actions">
+
+                <span id="adminName">
+                    Admin
+                </span>
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                    class="nav-button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN ADMIN PAGE
+         ========================================== -->
+
+    <main class="admin-page">
+
+        <div class="container">
+
+
+            <!-- ==================================
+                 ADMIN HEADER
+                 ================================== -->
+
+            <section class="admin-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        SNAPCITY ADMIN
+                    </p>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Manage places, update information,
+                        and keep SnapCity data organized.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 STATISTICS
+                 ================================== -->
+
+            <section class="admin-stats">
+
+
+                <!-- Total Places -->
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Places
+                        </p>
+
+                        <h2 id="totalPlaces">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Hostels -->
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        🏠
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Hostels & PGs
+                        </p>
+
+                        <h2 id="totalHostels">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Restaurants -->
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        🍽️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Restaurants
+                        </p>
+
+                        <h2 id="totalRestaurants">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Hospitals -->
+
+                <div class="admin-stat-card">
+
+                    <div class="admin-stat-icon">
+                        🏥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Hospitals
+                        </p>
+
+                        <h2 id="totalHospitals">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 ADD / EDIT PLACE
+                 ================================== -->
+
+            <section class="admin-form-section">
+
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            PLACE MANAGEMENT
+                        </p>
+
+                        <h2 id="formTitle">
+                            Add New Place
+                        </h2>
+
+                        <p>
+                            Add a new place to the SnapCity database.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PLACE FORM -->
+
+                <form id="placeForm">
+
+
+                    <!-- Hidden ID -->
+
+                    <input
+                        type="hidden"
+                        id="placeId"
+                    >
+
+
+
+                    <!-- Name -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeName">
+                            Place Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="placeName"
+                            placeholder="e.g. Sunrise Hostel"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- City -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeCity">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="placeCity"
+                            placeholder="e.g. Indore"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Category -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeCategory">
+                            Category
+                        </label>
+
+                        <select
+                            id="placeCategory"
+                            required
+                        >
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="hostel">
+                                Hostels & PGs
+                            </option>
+
+                            <option value="mess">
+                                Mess & Tiffin
+                            </option>
+
+                            <option value="restaurant">
+                                Restaurants
+                            </option>
+
+                            <option value="hospital">
+                                Hospitals
+                            </option>
+
+                            <option value="clinic">
+                                Clinics
+                            </option>
+
+                            <option value="temple">
+                                Temples
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Area -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeArea">
+                            Area
+                        </label>
+
+                        <input
+                            type="text"
+                            id="placeArea"
+                            placeholder="e.g. Vijay Nagar"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Address -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeAddress">
+                            Full Address
+                        </label>
+
+                        <textarea
+                            id="placeAddress"
+                            rows="3"
+                            placeholder="Enter the complete address..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- Price -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placePrice">
+                            Price
+                        </label>
+
+                        <input
+                            type="number"
+                            id="placePrice"
+                            placeholder="e.g. 8000"
+                            min="0"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Rating -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeRating">
+                            Rating
+                        </label>
+
+                        <input
+                            type="number"
+                            id="placeRating"
+                            placeholder="e.g. 4.5"
+                            min="0"
+                            max="5"
+                            step="0.1"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Phone -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placePhone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="placePhone"
+                            placeholder="e.g. 9876543210"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- Image -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeImage">
+                            Image URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="placeImage"
+                            placeholder="https://example.com/image.jpg"
+                        >
+
+                        <small>
+                            Use a direct image URL.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Description -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeDescription">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="placeDescription"
+                            rows="5"
+                            placeholder="Describe this place..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- Facilities -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeFacilities">
+                            Facilities
+                        </label>
+
+                        <input
+                            type="text"
+                            id="placeFacilities"
+                            placeholder="WiFi, Parking, Food, AC"
+                        >
+
+                        <small>
+                            Separate multiple facilities with commas.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Latitude -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeLatitude">
+                            Latitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="placeLatitude"
+                            placeholder="e.g. 22.7533"
+                            step="any"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Longitude -->
+
+                    <div class="admin-form-group">
+
+                        <label for="placeLongitude">
+                            Longitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="placeLongitude"
+                            placeholder="e.g. 75.8937"
+                            step="any"
+                        >
+
+                    </div>
+
+
+
+                    <!-- FORM ACTIONS -->
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            id="savePlaceButton"
+                            class="filter-button"
+                        >
+                            Save Place
+                        </button>
+
+
+                        <button
+                            type="button"
+                            id="cancelEditButton"
+                            class="clear-filter-button"
+                            style="display: none;"
+                        >
+                            Cancel Edit
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- FORM MESSAGE -->
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 MANAGE EXISTING PLACES
+                 ================================== -->
+
+            <section class="admin-places-section">
+
+
+                <!-- SECTION HEADING -->
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            DATABASE
+                        </p>
+
+                        <h2>
+                            Manage Places
+                        </h2>
+
+                        <p id="adminResultsCount">
+                            Loading places...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==================================
+                     ADMIN FILTERS
+                     ================================== -->
+
+                <div class="admin-filters">
+
+
+                    <!-- Search -->
+
+                    <div class="admin-filter-group">
+
+                        <label for="adminSearchInput">
+                            Search Places
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminSearchInput"
+                            placeholder="Search by name, area or address..."
+                        >
+
+                    </div>
+
+
+
+                    <!-- Category -->
+
+                    <div class="admin-filter-group">
+
+                        <label for="adminCategoryFilter">
+                            Category
+                        </label>
+
+                        <select id="adminCategoryFilter">
+
+                            <option value="">
+                                All Categories
+                            </option>
+
+                            <option value="hostel">
+                                Hostels & PGs
+                            </option>
+
+                            <option value="mess">
+                                Mess & Tiffin
+                            </option>
+
+                            <option value="restaurant">
+                                Restaurants
+                            </option>
+
+                            <option value="hospital">
+                                Hospitals
+                            </option>
+
+                            <option value="clinic">
+                                Clinics
+                            </option>
+
+                            <option value="temple">
+                                Temples
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- City -->
+
+                    <div class="admin-filter-group">
+
+                        <label for="adminCityFilter">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="adminCityFilter"
+                            placeholder="e.g. Indore"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Clear -->
+
+                    <button
+                        type="button"
+                        id="clearAdminFilters"
+                        class="clear-filter-button"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==================================
+                     PLACES CONTAINER
+                     ================================== -->
+
+                <div id="adminPlacesContainer">
+
+                    <div class="loading-state">
+
+                        <div class="loading-spinner"></div>
+
+                        <p>
+                            Loading places...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+                        Snap<span>City</span>
+                    </h3>
+
+                    <p>
+                        Your new city, simplified.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    © 2026 SnapCity.
+                    Built to help newcomers settle in faster.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         ADMIN JAVASCRIPT
+         ========================================== -->
+
+   <script src="js/theme.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>
