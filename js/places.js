@@ -233,10 +233,9 @@ async function loadPlaces() {
     // -----------------------------------------------------
 
     try {
-
-        const response = await fetch(
-            `http://localhost:5000/api/places?${queryParams.toString()}`
-        );
+const response = await fetch(
+    `https://snapcity-api.onrender.com/api/places?${queryParams.toString()}`
+);
 
 
         // -------------------------------------------------
