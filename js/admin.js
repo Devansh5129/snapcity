@@ -1355,7 +1355,7 @@ if (placeForm) {
 
                     response =
                         await fetch(
-                            `http://localhost:5000/api/places/${encodeURIComponent(
+                            `https://snapcity-api.onrender.com/api/places/${encodeURIComponent(
                                 editingPlaceId
                             )}`,
                             {
