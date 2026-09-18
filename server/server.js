@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+app.set("trust proxy", 1);
 
 require("dotenv").config();
 
