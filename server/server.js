@@ -1,16 +1,14 @@
-
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
+
+require("dotenv").config();
+
+const app = express();
+
 app.set("trust proxy", 1);
-
-require("dotenv").config();
-
-require("dotenv").config();
-
-
 // ==========================================
 // ENVIRONMENT VALIDATION
 // ==========================================
@@ -37,7 +35,6 @@ if (!process.env.JWT_SECRET) {
 const placeRoutes = require("./routes/placeRoutes");
 const authRoutes = require("./routes/authRoutes");
 
-const app = express();
 
 
 // ==========================================
