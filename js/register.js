@@ -50,7 +50,7 @@ registerForm.addEventListener(
 
             const response =
                 await fetch(
-                    "https://snapcity-api.onrender.com/api/auth/register",
+                    "https://snapcity-2.onrender.com/api/auth/register",
                     {
                         method: "POST",
                         headers: {

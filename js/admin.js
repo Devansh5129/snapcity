@@ -302,7 +302,7 @@ async function loadPlaces() {
 
         const response =
             await fetch(
-                "https://snapcity-api.onrender.com/api/places"
+                "https://snapcity-2.onrender.com/api/places"
             );
 
         if (!response.ok) {
@@ -1355,7 +1355,7 @@ if (placeForm) {
 
                     response =
                         await fetch(
-                            `https://snapcity-api.onrender.com/api/places/${encodeURIComponent(
+                            `https://snapcity-2.onrender.com/api/places/${encodeURIComponent(
                                 editingPlaceId
                             )}`,
                             {
@@ -1379,7 +1379,7 @@ if (placeForm) {
 
                     response =
                         await fetch(
-                            "https://snapcity-api.onrender.com/api/places",
+                            "https://snapcity-2.onrender.com/api/places",
                             {
                                 method: "POST",
                                 headers:
@@ -1496,7 +1496,7 @@ async function deletePlace(place) {
 
         const response =
             await fetch(
-                `https://snapcity-api.onrender.com/api/places/${encodeURIComponent(
+                `https://snapcity-2.onrender.com/api/places/${encodeURIComponent(
                     place._id
                 )}`,
                 {

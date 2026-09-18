@@ -249,7 +249,7 @@ async function loadPlaces() {
 
         const response =
             await fetch(
-                `https://snapcity-api.onrender.com/api/places?${queryParams.toString()}`
+                `https://snapcity-2.onrender.com/api/places?${queryParams.toString()}`
             );
 
 

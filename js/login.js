@@ -40,7 +40,7 @@ loginForm.addEventListener(
 
            const response =
     await fetch(
-        "https://snapcity-api.onrender.com/api/auth/login",
+        "https://snapcity-2.onrender.com/api/auth/login",
         {
             method: "POST",
             headers: {
